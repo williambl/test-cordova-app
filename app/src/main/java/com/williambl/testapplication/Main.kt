@@ -20,7 +20,8 @@ class Main : AppCompatActivity() {
 
     fun sendToast(view: View) {
         val context = applicationContext
-        val text = getString(R.string.toast_label)
+        val editText = findViewById<View>(R.id.editText) as EditText
+        val text = editText.text.toString()
         val duration = Toast.LENGTH_SHORT
 
         val toast = Toast.makeText(context, text, duration)
